@@ -1,0 +1,7 @@
+{% block ticket_list %}
+
+{% for ticket in ActiveTickets %}
+    {{ include('admin/ticket.html.twig') }}
+{% endfor %}
+
+{% endblock %}

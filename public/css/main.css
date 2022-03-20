@@ -1,0 +1,123 @@
+body{
+    background: #218BC3;
+}
+#content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    height: 96vh;
+    align-content: center;
+}
+.block {
+    display: flex;
+    border: 1px solid #ddd;
+    margin: 5px;
+    padding: 0 10px 10px 10px;
+    border-radius: 4px;
+    box-shadow: 0 4px 7px -2px #000;
+    background: #fff;
+    flex-flow: column nowrap;
+}
+ .header {
+    border-bottom: 1px solid #d2d2d2;
+    padding: 5px;
+    margin: 0 -11px;
+    text-align: center;
+    text-transform: uppercase;
+}
+form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+label {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 6px;
+}
+.input_name {
+    padding-right: 7px;
+}
+button {
+
+    padding: 3px;
+    background: #2aa6f0;
+    border-radius: 4px;
+    border: 1px solid #bfbebe;
+}
+#float_wrapper {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+.inviz{
+  visibility: hidden;
+    height: 1px;
+}
+
+.note {
+    border: 1px solid #317c9f;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    background: #69dfea;
+    color: #000;
+    position: relative;
+    box-shadow: 0 2px 7px -3px #000;
+}
+.note button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+.error{
+    border: 1px solid #9f3131;
+    background: #e36767;
+}
+
+.dashboard {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 1 auto;
+    height: 100%;
+}
+.greating {
+    display: flex;
+    flex: 1 1 100%;
+}
+.new_ticket, .tickets_list, .resolved_ticket {
+    display: flex;
+    flex: 1 1 45%;
+    border: 1px solid #ddd;
+    flex-flow: column nowrap;
+}
+.tickets_list, .resolved_ticket {
+    overflow: auto;
+    max-height: 90vh;
+    position: relative;
+}
+.ticket_wrapper {
+    border: 1px solid #ddd;
+    margin: 3px;
+    background: #fff;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.ticket_wrapper .header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+.flex-col{
+    flex-flow: column nowrap;
+}
+.flex-row{
+    flex-flow: row wrap !important;
+}
+
+.flex_full {
+    display: flex;
+    /*flex-flow: row nowrap;*/
+    flex: 1 1 100%;
+}

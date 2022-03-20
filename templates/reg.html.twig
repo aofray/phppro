@@ -1,0 +1,30 @@
+
+{% block reg %}
+    <div id="reg_wrapper" class="block">
+        <div class="header">Регистрация</div>
+        <div class="block_content">
+        <form action="reg" method="post" onsubmit="SendForm(event)">
+            <label for="name">
+                <div class="input_name">Ваше имя</div>
+                <input type="text" value="" id="name" name="name" placeholder="Как Вас зовут">
+            </label>
+            <label for="email">
+                <div class="input_name">e-mail</div>
+                <input type="text" value="" id="email" name="email" placeholder="e-mail">
+            </label>
+            <label for="password">
+                <div class="input_name">Пароль</div>
+                <input type="text" value="" id="password" name="password">
+            </label>
+            <label for="role">
+                <div class="input_name">Роль</div>
+                <select name="role" id="role">
+                    <option value="user">Пользователь</option>
+                    <option value="admin">Администратор</option>
+                </select>
+            </label>
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+        </div>
+    </div>
+{% endblock %}

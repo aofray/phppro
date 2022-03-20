@@ -1,0 +1,8 @@
+{% block float_masseg %}
+    <div class="note error" id="note_{{ 'now'|date('U') }}"  >
+        <button onclick="close(event, 'note_{{ 'now'|date('U') }}')">x</button>
+        <div class="message">
+            {{ error.message }}
+        </div>
+    </div>
+{% endblock %}
