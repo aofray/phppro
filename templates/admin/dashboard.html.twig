@@ -1,0 +1,55 @@
+{% if ajax != true %}
+    {% extends 'index.html.twig' %}
+{% endif  %}
+
+
+{% block content %}
+    <div class="greating">
+        Добро пожаловать {{ user.name }}
+        <button onclick="logout()">Выход</button>
+    </div>
+<div class="dashboard">
+    <div class="flex_full ">
+        <form action="sort" class="flex-row block" id="sorting" method="get" onsubmit="SendForm(event)">
+             <label for="sort_asc">
+                <div class="input_name">По возрастанию</div>
+                 <input  id="sort_asc"   name="sort" type="radio" value="ASC" onchange="this.form.dispatchEvent(new Event
+            ('submit', {cancelable: true}))">
+            </label>
+
+            <label for="sort_desc">
+                <div class="input_name">По убыванию</div>
+                <input   id="sort_desc" name="sort" type="radio" value="DESC" onchange="this.form.dispatchEvent(new Event
+            ('submit', {cancelable: true}))">
+            </label>
+            <label for="date_from">
+                <div class="input_name">C</div>
+                <input id="date_from" name="date_from" type="date" value="" onchange="this.form.dispatchEvent  (new
+                Event  ('submit', {cancelable: true}))">
+            </label>
+            <label for="date_to">
+                <div class="input_name">по </div>
+                <input id="date_to" name="date_to" type="date" value="" onchange="this.form.dispatchEvent  (new
+                Event  ('submit', {cancelable: true}))">
+            </label>
+            <button type="submit">OK</button>
+        </form>
+
+    </div>
+    <div class="tickets_list scroll" id="">
+        <div id="tickets_list">
+            {{ include('admin/ticket_list.html.twig') }}
+        </div>
+    <div class="flex-full">
+        <input id="paginator" form="sorting" type="text" readonly class="paginator inviz" name="offset" value="10">
+    </div>
+    </div>
+
+    <div id="resolved_ticket">
+        {% for ticket in ResolveTickets %}
+            {{ include('tickets/ticket.html.twig') }}
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
